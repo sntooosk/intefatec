@@ -1,5 +1,5 @@
 
-package intefatec;
+package intefatec.interfatec_2025;
 
 import java.util.Scanner;
 
