@@ -1,10 +1,10 @@
-
+package intefatec.interfatec_2025;
 
 import java.util.*;
 
 /**
  *
- * @author aluno
+ * @author ByteSquad
  */
 public class fonte {
    

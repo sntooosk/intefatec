@@ -1,10 +1,10 @@
-
+package intefatec.interfatec_2025;
 
 import java.util.Scanner;
 
 /**
  *
- * @author Juliano 
+ * @author ByteSquad
  */
 public class suprimentos {
     
