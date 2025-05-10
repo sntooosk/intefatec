@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Camisetas {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int T = sc.nextInt(); // Quantidade total de tecido
+        int[] Q = new int[3]; // Quantidade de tecido por camiseta
+        int[] L = new int[3]; // Lucro por camiseta
+
+        // Lê Q
+        for (int i = 0; i < 3; i++) {
+            Q[i] = sc.nextInt();
+        }
+
+        // Lê L
+        for (int i = 0; i < 3; i++) {
+            L[i] = sc.nextInt();
+        }
+
+        // Programação dinâmica
+        int[] dp = new int[T + 1]; // dp[i] = lucro máximo usando i tecido
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = Q[i]; j <= T; j++) {
+                dp[j] = Math.max(dp[j], dp[j - Q[i]] + L[i]);
+            }
+        }
+
+        System.out.println(dp[T]);
+        sc.close();
+    }
+}
