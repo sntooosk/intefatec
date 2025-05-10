@@ -1,40 +1,27 @@
-package intefatec.interfatec_2025;
-
 import java.util.Scanner;
 
-/**
- *
- * @author ByteSquad
- */
-
-public class camisetas {
+public class Camisetas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        int tecido = sc.nextInt();
-        int[] quantidade_tecido = new int[3];
-        int[] lucro_gerado = new int[3];
+
+        int T = sc.nextInt();
+
+        int[] Q = new int[3];
+        int[] L = new int[3];
 
         for (int i = 0; i < 3; i++) {
-            quantidade_tecido[i] = sc.nextInt();
+            Q[i] = sc.nextInt();
+            L[i] = sc.nextInt();
         }
 
-        
-        for (int i = 0; i < 3; i++) {
-            lucro_gerado[i] = sc.nextInt();
-        }
-
-        int[] dp = new int[tecido + 1];
+        int[] dp = new int[T + 1];
 
         for (int i = 0; i < 3; i++) {
-            for (int j = quantidade_tecido[i]; j <= tecido; j++) {
-                dp[j] = Math.max(dp[j], dp[j - quantidade_tecido[i]] + lucro_gerado[i]);
+            for (int j = Q[i]; j <= T; j++) {
+                dp[j] = Math.max(dp[j], dp[j - Q[i]] + L[i]);
             }
         }
 
-        System.out.println(dp[tecido]);
-        sc.close();
+        System.out.println(dp[T]);
     }
 }
-
-       
