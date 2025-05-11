@@ -1,11 +1,5 @@
-package intefatec.interfatec_2025;
+import java.util.*;
 
-import java.util.Scanner;
-
-/**
- *
- * @author ByteSquad
- */
 public class suprimentos {
     
     

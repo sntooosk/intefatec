@@ -1,12 +1,5 @@
-package intefatec.interfatec_2025;
+import java.util.*;
 
-
-import java.util.Scanner;
-
-/**
- *
- * @author byteSquad
- */
 public class agricultor {
     
    
